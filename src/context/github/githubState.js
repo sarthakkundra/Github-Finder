@@ -1,13 +1,17 @@
+// Dependencies
 import React, { useReducer } from "react";
 import axios from "axios";
 import GithubContext from "./githubContext";
 import GithubReducer from "./githubReducer";
+
+// Types for dispatch
 import {
   SEARCH_USERS,
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
   GET_REPOS,
+  GET_LABELS
 } from "../types";
 
 const GithubState = (props) => {
@@ -15,6 +19,7 @@ const GithubState = (props) => {
     users: [],
     user: {},
     repos: [],
+    labels: [],
     loading: false,
   };
 
@@ -58,6 +63,19 @@ const GithubState = (props) => {
     });
   };
 
+  // Search Labels
+  const searchLabels = async(label) => {
+    const res = await axios.get(
+      `https://api.github.com/search/labels?repository_id=64778136&q=${label}`
+    );
+
+    dispatch({
+      type: GET_LABELS,
+      payload: res.data.items
+    })
+    console.log(res.data);
+  };
+
   //   Clear Users
   const clearUsers = () => dispatch({ type: CLEAR_USERS });
 
@@ -73,7 +91,8 @@ const GithubState = (props) => {
         searchUsers,
         clearUsers,
         getUser,
-        getUserRepos
+        getUserRepos,
+        searchLabels
       }}
     >
       {props.children}
