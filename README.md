@@ -7,7 +7,7 @@
 
 
 
-![](header.png)
+![Screenshot](https://github.com/sarthakkundra/Github-Finder/blob/master/header.PNG)
 
 
 ## Usage example
