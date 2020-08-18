@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import GithubContext from "../../context/github/githubContext";
+import GithubContext from "../context/github/githubContext";
 
 
 export const SearchLabel = () => {

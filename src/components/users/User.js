@@ -2,13 +2,14 @@ import React, { Fragment, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "../layouts/Spinner.js";
 import Repos from "../repos/Repos";
-import SearchLabel from "../repos/SearchLabel";
+import Labels from '../../issues/Labels'
+import SearchLabel from "../../issues/SearchLabel";
 import GithubContext from "../../context/github/githubContext";
 
 const User = ({ match }) => {
   const githubContext = useContext(GithubContext);
 
-  const { loading, getUser, user, repos, getUserRepos } = githubContext;
+  const { loading, getUser, user, repos, getUserRepos, labels } = githubContext;
 
   useEffect(() => {
     getUser(match.params.login);
@@ -82,6 +83,7 @@ const User = ({ match }) => {
       </div>
       <SearchLabel />
       <Repos repos={repos} />
+      <Labels labels={labels} />
     </Fragment>
   );
 };
