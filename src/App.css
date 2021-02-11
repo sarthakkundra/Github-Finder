@@ -114,6 +114,11 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover .round-img {
+  width: 80px !important;
 }
 
 /* List */
@@ -224,6 +229,11 @@ img {
   font-size: 0.8rem;
   padding: 0.3rem 1rem;
   margin-right: 0.2rem;
+}
+
+
+.btn-sm:hover {
+  color: #FFF;
 }
 
 .badge {
