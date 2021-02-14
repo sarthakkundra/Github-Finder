@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 const UserItem = ({ user: { avatar_url, html_url, login } }) => {
+  function getColor() {
+      let colors = ['#EFF9DA', '#e9f4fd', '#eafbfb', '#F9EBDF', '#eae5f4', "#ffe4d2"];
+      return (colors[Math.floor(Math.random() * colors.length)]);
+  }
+
   return (
-    <div className='card text-center'>
+    <div className='card text-center' style={{backgroundColor: getColor()}}>
       <div
         className="img-wrapper"
         style={imgStyle}
@@ -12,14 +17,14 @@ const UserItem = ({ user: { avatar_url, html_url, login } }) => {
           src={avatar_url}
           alt=''
           className='round-img'
-          style={{ width: "120px", transition: "all 0.4s ease" }}
+          style={{ width: "80px", transition: "all 0.4s ease" }}
         />
       </div>
       <h3>{login}</h3>
 
       <div>
-        <Link className='btn btn-dark btn-sm my-1' to={`/user/${login}`}>
-          More
+        <Link className='btn btn-light btn-sm my-1 profile-btn' to={`/user/${login}`}>
+          View More
         </Link>
       </div>
     </div>
@@ -36,7 +41,7 @@ const imgStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  border: "5px solid var(--light-color)"
+  border: "5px solid #FFFFFF5B"
 };
 
 export default UserItem;
