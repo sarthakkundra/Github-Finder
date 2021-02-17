@@ -20,7 +20,7 @@ import AlertState from "./context/alert/alertState";
 // Main CSS
 import "./App.css";
 
-const App = () => {
+const App = ():JSX.Element => {
   return (
     <GithubState>
       <AlertState>
@@ -34,7 +34,6 @@ const App = () => {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/user/:login' component={User} />
                 <Route component={NotFound} />
-                )} />
               </Switch>
             </div>
           </div>

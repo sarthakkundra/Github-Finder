@@ -25,14 +25,16 @@ const Search = () => {
     return (
       <div>
         <form onSubmit={onSubmit} className='form'>
-          <input
-            type='text'
-            name='text'
-            placeholder='Enter a user'
-            value={text}
-            onChange={onChange}
-          />
-
+          <div className="input-icon">
+          <i class="fa fa-search"></i>
+            <input
+              type='text'
+              name='text'
+              placeholder='Enter a user'
+              value={text}
+              onChange={onChange}
+            />
+          </div>
           <input
             type='submit'
             value='Search'
