@@ -6,3 +6,5 @@ export const SET_LOADING = 'SET_LOADING';
 export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const GET_LABELS = 'GET_LABELS';
+export const SET_TEXT = 'SET_TEXT';
+export const SET_HASMORE ='SET_HASHMORE';

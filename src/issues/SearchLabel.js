@@ -17,7 +17,7 @@ export const SearchLabel = () => {
     <div>
       <form onSubmit={onSubmit} className='form'>
         <div className="input-icon">
-            <i class="fa fa-search"></i>
+            <i className="fa fa-search"></i>
             <input
               type='text'
               name='text'

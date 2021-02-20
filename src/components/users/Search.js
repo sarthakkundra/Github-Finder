@@ -17,7 +17,8 @@ const Search = () => {
     if (text === "") {
       alertContext.setAlert("Please enter something", "light");
     } else {
-      githubContext.searchUsers(text);
+      githubContext.searchUsers(text,1,[]);
+      githubContext.setText(text)
       setText('');
     }
   }
