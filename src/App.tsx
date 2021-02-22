@@ -12,6 +12,7 @@ import Alert from "./components/layouts/Alert";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import NotFound from "./components/pages/NotFound";
+import Footer from "./components/pages/Footer";
 
 // States (Context API)
 import GithubState from "./context/github/githubState";
@@ -37,6 +38,7 @@ const App = ():JSX.Element => {
               </Switch>
             </div>
           </div>
+          <Footer />
         </Router>
       </AlertState>
     </GithubState>
