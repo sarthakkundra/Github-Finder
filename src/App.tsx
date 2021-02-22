@@ -21,7 +21,7 @@ import AlertState from "./context/alert/alertState";
 // Main CSS
 import "./App.css";
 
-const App = () => {
+const App = ():JSX.Element => {
   return (
     <GithubState>
       <AlertState>

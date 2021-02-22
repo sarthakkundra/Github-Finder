@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
 /* Global Styles */
 :root {
@@ -16,11 +16,11 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
-  color: #333;
+  color: #110A57;
 }
 
 a {
@@ -112,8 +112,14 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: #ECEDF2 1px dotted;
+  border-radius: 10px;
   margin: 0.7rem 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover .round-img {
+  width: 100px !important;
 }
 
 /* List */
@@ -220,10 +226,20 @@ img {
   width: 100%;
 }
 
-.btn-sm {
-  font-size: 0.8rem;
-  padding: 0.3rem 1rem;
+.profile-btn {
+  color: black !important;
+  background-color: #FFF !important;
+  font-size: 0.9rem;
+  padding: 0.3rem 1.5rem;
   margin-right: 0.2rem;
+  border-radius: 50px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.357);
+}
+
+.profile-btn:hover {
+  background-color: #FFF !important;
+  color: black !important;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.357);
 }
 
 .badge {
@@ -291,7 +307,7 @@ img {
 .alert-white {
   background: #fff;
   color: #333;
-  border: #ccc solid 1px;
+  border: #ECEDF2 solid 1px;
 }
 
 .btn:hover {
@@ -300,7 +316,7 @@ img {
 
 .bg-light,
 .badge-light {
-  border: #ccc solid 1px;
+  border: #ECEDF2 solid 1px;
 }
 
 .round-img {
@@ -309,6 +325,7 @@ img {
 
 /* Forms */
 input {
+  font-weight: 300;
   margin: 1.2rem 0;
 }
 
@@ -323,17 +340,20 @@ input[type='email'],
 input[type='password'],
 input[type='date'],
 select,
-textarea {
+textarea,
+.input-icon {
   display: block;
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.4rem 1rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ECEDF2;
+  border-radius: 50px;
 }
 
 input[type='submit'],
 button {
   font: inherit;
+  border-radius: 50px;
 }
 
 table th,
@@ -374,6 +394,28 @@ table th {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+}
+
+/* Search Bar */
+
+.input-icon {
+  font-size: 1rem;
+  color: var(--dark-color);
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-icon input {
+  color: var(--dark-color);
+  margin: 0px;
+  margin-left: 7px;
+  width: calc(100% - 30px);
+  padding: 0px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0px;
 }
 
 /* Mobile Styles */

@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import Spinner from "../layouts/Spinner.js";
+import Spinner from "../layouts/Spinner";
 import Repos from "../repos/Repos";
 import Labels from '../../issues/Labels'
 import SearchLabel from "../../issues/SearchLabel";

@@ -24,6 +24,7 @@ const Users = () => {
 
 const userStyle = {
   display: "grid",
+  padding: "2rem 0rem",
   gridTemplateColumns: "repeat(3, 1fr)",
   gridGap: "1rem",
 };
